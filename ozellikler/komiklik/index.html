@@ -10,39 +10,44 @@
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     h2 {
       color: crimson;
-      text-align: center;
-      margin-bottom: 10px;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
     }
 
     p {
       color: #ccc;
       font-size: 1rem;
-      margin-bottom: 20px;
-      text-align: center;
+      margin-bottom: 30px;
     }
 
-    iframe {
-      width: 100%;
-      max-width: 600px;
-      height: 500px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    a.play-link {
+      background-color: crimson;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    a.play-link:hover {
+      background-color: darkred;
     }
 
     .back {
-      margin-top: 30px;
+      margin-top: 40px;
       padding: 10px 20px;
       border: none;
-      background-color: crimson;
+      background-color: #555;
       color: white;
       font-size: 1rem;
       border-radius: 6px;
@@ -51,15 +56,14 @@
     }
 
     .back:hover {
-      background-color: darkred;
+      background-color: #777;
     }
   </style>
 </head>
 <body>
   <h2>Komiklik Biraz Azaltıldı</h2>
-  <p>Şaka şaka, böyle bir şey mümkün değil.<br>Ama sayfa boş durmasın diye aşağıya solitaire oyunu ekliyorum.</p>
-  <iframe src="https://solitaired.com/embed/klondike" allowfullscreen></iframe>
+  <p>Şaka şaka, böyle bir şey mümkün değil.<br>Ama sayfa boş kalmasın diye aşağıya oyun ekliyorum:</p>
+  <a class="play-link" href="https://www.google.com/logos/fnbx/solitaire/standalone.html" target="_blank">👉 Solitaire Oynamak İçin Buraya Tıkla</a>
   <button class="back" onclick="window.location.href='../../index.html'">🔙 Geri Dön</button>
 </body>
 </html>
-
