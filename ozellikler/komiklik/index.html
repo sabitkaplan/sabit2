@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Komiklik Biraz Azaltıldı</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      color: crimson;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 500px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    .back {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: none;
+      background-color: crimson;
+      color: white;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .back:hover {
+      background-color: darkred;
+    }
+  </style>
+</head>
+<body>
+  <h2>Komiklik Biraz Azaltıldı</h2>
+  <p>Şaka şaka, böyle bir şey mümkün değil.<br>Ama sayfa boş durmasın diye aşağıya solitaire oyunu ekliyorum.</p>
+  <iframe src="https://solitaired.com/embed/klondike" allowfullscreen></iframe>
+  <button class="back" onclick="window.location.href='../../index.html'">🔙 Geri Dön</button>
+</body>
+</html>
 
