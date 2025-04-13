@@ -42,13 +42,13 @@
       border-radius: 8px;
       font-size: 1rem;
       cursor: pointer;
-      transition: 0.3s;
+      transition: transform 0.3s ease;
+      position: relative;
     }
 
     #evet {
       background-color: crimson;
       color: white;
-      position: relative;
     }
 
     #hayir {
@@ -94,10 +94,21 @@
   <button class="back" onclick="window.location.href='../../index.html'">🔙 Geri Dön</button>
 
   <script>
-    let offset = 0;
+    let adim = 0;
+    const evet = document.getElementById('evet');
+    let posX = 0;
+    let posY = 0;
+    const mesafe = 40;
+
     function kac() {
-      offset += 30;
-      document.getElementById('evet').style.transform = 'translateX(' + offset + 'px)';
+      adim = (adim + 1) % 4;
+
+      if (adim === 0) posY += mesafe;       // Aşağı
+      else if (adim === 1) posX -= mesafe;  // Sola
+      else if (adim === 2) posY -= mesafe;  // Yukarı
+      else if (adim === 3) posX += mesafe;  // Sağa
+
+      evet.style.transform = `translate(${posX}px, ${posY}px)`;
     }
 
     function cevapGoster() {
