@@ -13,58 +13,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
+      justify-content: start;
+      padding-top: 40px;
     }
 
     h2 {
-      margin-bottom: 30px;
-      font-size: 1.8rem;
       color: crimson;
-      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
     }
 
-    .scene {
-      position: relative;
-      width: 300px;
-      height: 300px;
-    }
-
-    .clock {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 80px;
-      transform: translateY(-50%);
-      animation: throw 2s ease-in-out infinite;
-    }
-
-    .explosion {
-      position: absolute;
-      left: 180px;
-      top: 50%;
-      width: 100px;
-      transform: translateY(-50%) scale(0);
-      opacity: 0;
-      animation: explode 2s ease-in-out infinite;
-      animation-delay: 1s;
-    }
-
-    @keyframes throw {
-      0% { left: 0; transform: translateY(-50%) rotate(0deg); opacity: 1; }
-      50% { left: 180px; transform: translateY(-50%) rotate(360deg); opacity: 0; }
-      100% { left: 0; transform: translateY(-50%) rotate(0deg); opacity: 1; }
-    }
-
-    @keyframes explode {
-      0%, 40% { transform: scale(0); opacity: 0; }
-      50% { transform: scale(1.2); opacity: 1; }
-      60%, 100% { transform: scale(0); opacity: 0; }
+    img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 60, 0, 0.6);
     }
 
     .back {
-      margin-top: 40px;
+      margin-top: 30px;
       padding: 10px 20px;
       border: none;
       background-color: crimson;
@@ -82,10 +49,7 @@
 </head>
 <body>
   <h2>Hesaplamalar ve Sayılarla İlişki Azaltıldı</h2>
-  <div class="scene">
-    <img src="clock_throw.png" class="clock" alt="Saat fırlatma" />
-    <img src="explosion.png" class="explosion" alt="Patlama efekti" />
-  </div>
+  <img src="saat_firlatma_gorsel.png" alt="Saat fırlatma sahnesi" />
   <button class="back" onclick="window.location.href='../../index.html'">🔙 Geri Dön</button>
 </body>
 </html>
