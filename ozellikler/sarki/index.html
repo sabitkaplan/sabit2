@@ -101,12 +101,13 @@
     const mesafe = 80;
 
     function kac() {
+      document.getElementById("cevap").style.display = "none";
       adim = (adim + 1) % 4;
 
-      if (adim === 0) posY += mesafe;       // Aşağı
-      else if (adim === 1) posX -= mesafe;  // Sola
-      else if (adim === 2) posY -= mesafe;  // Yukarı
-      else if (adim === 3) posX += mesafe;  // Sağa
+      if (adim === 0) posY += mesafe;
+      else if (adim === 1) posX -= mesafe;
+      else if (adim === 2) posY -= mesafe;
+      else if (adim === 3) posX += mesafe;
 
       evet.style.transform = `translate(${posX}px, ${posY}px)`;
     }
